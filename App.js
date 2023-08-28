@@ -1,20 +1,45 @@
 
 import React from 'react';
-import {Text, View, Image} from 'react-native';
+import {Text, View, Image, Button} from 'react-native';
 
 
 
 export default class App extends React.Component {
 
+  Header = () => {
+    return (
+      <Text>Home | Sobre | Contato</Text>
+    );
+    
+  }
+  Body = () => {
+    return (
+      <Text>Conteudo do APP</Text>
+    );
+    
+  }
+  Footer = () => {
+    return (
+      <Text>Rodapé do meu APP</Text>
+    );
+    
+  }
+
   render() {
     return (
-      <View>
-        <Text>Minha Imagem</Text>
-        <Image style={{width:50, height:50}}
-          source={{ uri: "https://picsum.photos/seed/696/3000/2000" }}
-      />
+      <View style={{marginTop:20}}>
+        <this.Header></this.Header>
+        <this.Body></this.Body>
+        <this.Footer></this.Footer>
+        <Botao></Botao>
       </View>
     );
   }
 
+}
+
+const Botao = () => {
+  return(
+    <Button title='Clique aqui'></Button>
+  )
 }
